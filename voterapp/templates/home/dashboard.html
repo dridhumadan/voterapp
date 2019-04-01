@@ -2,12 +2,13 @@
 
 {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/dashboard.css') }}">
+    <div class="vs">{{ voter.cand_id }}</div>
     <div class="dashboard">
         <div class="info">
-            <h3>Dridhu Madan</h3>
-            <h3>Voter ID : <span class="span-info">KA2310025</span></h3>
-            <h3>Constituency : <span class="span-info">Bengaluru Rural</span></h3>
-            <h3>Vote Casted : <span class="status"><i class="fas fa-check fa-fw fa-lg"></i></span></h3>
+            <h3>{{ voter.first_name }} {{ voter.last_name }}</h3>
+            <h3>Voter ID : <span class="span-info">{{ voter.voter_id }}</span></h3>
+            <h3>Constituency : <span class="span-info">{{ cname }}</span></h3>
+            <h3>Vote Casted : <span class="status"><i class="fas fa-check fa-fw fa-lg" id="vs"></i></span></h3>
         </div>
         <div class="vote box hov">
             <h1><i class="fas fa-hand-point-up fa-fw fa-2x"></i></h1>

@@ -28,3 +28,11 @@ class CL:
                 ('KA26', 'Bengaluru South'),
                 ('KA27', 'Chikballapur'),
                 ('KA28', 'Kolar')]
+
+
+def generate_voter_id(cvid, ccode):
+    num = int(cvid[4:7])
+    num = num + 1
+    newstr = str(num).zfill(3)
+    vid = ccode + newstr
+    return vid

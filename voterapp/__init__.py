@@ -9,7 +9,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 login = LoginManager(app)
-login.login_view = 'auth.login'
 
 from voterapp.errors.handlers import errors
 from voterapp.home.routes import home

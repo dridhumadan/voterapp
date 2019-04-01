@@ -5,6 +5,10 @@
     color: white;
 }
 
+.vs{
+    display: none;
+}
+
 .info{
     background-color: #ededed;
     color: rgba(27,27,195,1);
