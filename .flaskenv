@@ -1,0 +1,2 @@
+FLASK_APP=voterapp
+FLASK_ENV=development

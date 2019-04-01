@@ -1,0 +1,20 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
+    <div class="index">
+        <h1 class="heading">Welcome to the Voter App</h1>
+        <p>Login or Register to use the app</p>
+        <div class="main-block">
+            <div class="login sec">
+                <h1><i class="fas fa-user fa-fw fa-2x"></i></h1>
+                <h2>Login</h2>
+            </div>
+            <div class="register sec">
+                <h1><i class="fab fa-wpforms fa-fw fa-2x"></i></h1>
+                <h2>Register</h2>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename = 'js/index.js') }}" charset="utf-8"></script>
+{% endblock content %}

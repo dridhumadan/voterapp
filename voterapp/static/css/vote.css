@@ -1,0 +1,36 @@
+.vote h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+.candidates{
+
+}
+
+.cand{
+    background-color: #efefef;
+    width: 600px;
+    height: 120px;
+    margin: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#symbol{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+.cand h3{
+    padding: 20px;
+}
+
+.bjp:hover{
+    background-color: orange;
+}
+
+.inc:hover{
+    background-color: lightblue;
+}

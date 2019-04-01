@@ -1,0 +1,108 @@
+.dashboard{
+    display: grid;
+    grid-template-rows: 100px 120px 120px 160px;
+    grid-template-columns: 50% 50%;
+    color: white;
+}
+
+.info{
+    background-color: #ededed;
+    color: rgba(27,27,195,1);
+    box-shadow: 0 10px 6px -6px #777;
+    grid-row: span 1;
+    grid-column: span 2;
+    margin: 10px 20px 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info h3{
+    margin: 10px 20px;
+}
+
+.status{
+    padding: 10px;
+    background-color: rgb(22,152,48,1);
+    color: white;
+    border-radius: 40px;
+}
+
+.span-info{
+    padding: 10px;
+    border: 1px solid rgba(27,27,195,1);
+    border-radius: 40px;
+}
+
+.vote{
+    grid-row: span 2;
+    grid-column: span 1;
+    margin: 5px 5px 5px 20px;
+    background: rgb(219,17,17);
+    background: linear-gradient(90deg, rgba(219,17,17,1) 0%, rgba(250,49,49,1) 100%);
+}
+
+.correction{
+    grid-row: span 1;
+    grid-column: span 1;
+    background: rgb(226,218,33);
+    background: linear-gradient(90deg, rgba(240,232,37,1) 0%, rgba(249,246,13,1) 100%);
+}
+
+.candidate{
+    grid-row: span 1;
+    grid-column: span 1;
+    background: rgb(27,27,195);
+    background: linear-gradient(90deg, rgba(27,27,195,1) 0%, rgba(53,180,205,1) 100%);
+}
+
+.results{
+    grid-row: span 1;
+    grid-column: span 2;
+    margin: 5px 20px;
+    background: rgb(38,226,54);
+    background: linear-gradient(90deg, rgba(38,226,54,1) 0%, rgba(22,152,48,1) 100%);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box p{
+    margin: 0px;
+    padding: 0px 20px;
+    font-size: 2em;
+}
+
+.box h1{
+    margin: 0;
+}
+
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 20px 5px 5px;
+}
+
+.box2 p{
+    margin: 0px;
+    padding: 0px 20px;
+    font-size: 1.7em;
+}
+
+.box2 h1{
+    margin: 0px;
+}
+
+.hov{
+    cursor: pointer;
+}
+
+.hov:hover{
+  transform: scale(1.02);
+  transition: transform 0.1s ease-out;
+  box-shadow: 0 10px 6px -6px #777;
+}

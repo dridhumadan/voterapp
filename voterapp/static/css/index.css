@@ -1,0 +1,56 @@
+.index{
+    color: rgba(27,27,195,1);
+}
+
+.heading{
+    text-align: center;
+    font-size: 3em;
+}
+
+.index p{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.main-block{
+    display: grid;
+    grid-template-rows: 150px;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    color: white;
+}
+
+.sec{
+    grid-row: span 1;
+    grid-column: span 1;
+    margin: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sec:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.sec h1{
+    margin: 20px;
+}
+
+.sec h2{
+    font-size: 2.5em;
+}
+
+.login{
+    background: rgb(38,226,54);
+    background: linear-gradient(90deg, rgba(38,226,54,1) 0%, rgba(22,152,48,1) 100%);
+}
+
+.register{
+    background: rgb(27,27,195);
+    background: linear-gradient(90deg, rgba(27,27,195,1) 0%, rgba(53,180,205,1) 100%);
+}
