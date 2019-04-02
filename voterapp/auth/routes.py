@@ -40,6 +40,7 @@ def register():
                       const_code = form.constituency.data)
         db.session.add(voter)
         db.session.commit()
+        flash('Account created. Please login.')
         return redirect(url_for('auth.login'))
     return render_template('auth/register.html', form = form)
 

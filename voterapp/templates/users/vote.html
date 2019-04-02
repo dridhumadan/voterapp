@@ -4,24 +4,24 @@
 
 <div class="vote">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/vote.css') }}">
-    <h1>Constituency - Bengaluru Rural</h1>
+    <h1>Constituency - {{ con }}</h1>
     <div class="candidates">
-        <div class="cand bjp">
-            <img src="{{ url_for('static', filename = 'images/bjp.png') }}" alt="" id = "symbol">
-            <h3>BJP</h3>
-            <p>Name of candidate</p>
+        {% for candidate in cand %}
+        <div class="cand" id="{{ candidate.party_no }}">
+            <img src="static/images/{{ candidate.party_no }}.png" alt="" id = "symbol">
+            <h3>{{ candidate.party_no }}</h3>
+            <p>{{ candidate.first_name }} {{ candidate.last_name }}</p>
+            <script>
+                cand = document.getElementById('{{ candidate.party_no }}');
+            
+                cand.onclick = function(){
+                    window.location.href = '/vote/{{ candidate.cand_id }}'
+                }
+            </script>
         </div>
-        <div class="cand inc">
-            <img src="{{ url_for('static', filename = 'images/inc.png') }}" alt="" id = "symbol">
-            <h3>Congress</h3>
-            <p>Name of candidate</p>
-        </div>
-        <div class="cand">
-            <img src="{{ url_for('static', filename = 'images/jds.png') }}" alt="" id = "symbol">
-            <h3>JDS</h3>
-            <p>Name of candidate</p>
-        </div>
+        {% endfor%}
     </div>
+    <!--<script src="{{ url_for('static', filename = 'js/vote.js') }}"></script>-->
 </div>
 
 {% endblock content %}

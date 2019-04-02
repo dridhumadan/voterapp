@@ -13,3 +13,9 @@ if(vs.innerHTML == 'None'){
     fontawesome.classList.remove('fa-check');
     fontawesome.classList.add('fa-times');
 }
+
+vote = document.getElementsByClassName('vote')[0];
+
+vote.onclick = function(){
+    window.location.href = '/vote';
+}

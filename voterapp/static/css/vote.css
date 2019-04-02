@@ -3,10 +3,6 @@
     text-align: center;
 }
 
-.candidates{
-
-}
-
 .cand{
     background-color: #efefef;
     width: 600px;
@@ -15,6 +11,12 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+}
+
+.cand:hover{
+    transform: scale(1.02);
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 10px 6px -6px #777; 
 }
 
 #symbol{
@@ -27,10 +29,14 @@
     padding: 20px;
 }
 
-.bjp:hover{
-    background-color: orange;
+[id="1"]:hover{
+    background-color: rgb(241, 142, 21);
 }
 
-.inc:hover{
-    background-color: lightblue;
+[id="2"]:hover{
+    background-color: rgb(92, 196, 231);
+}
+
+[id="3"]:hover{
+    background-color: rgb(22, 148, 22);
 }

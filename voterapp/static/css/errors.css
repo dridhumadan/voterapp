@@ -1,0 +1,30 @@
+.content-section{
+    text-align: center;
+}
+
+.logo{
+    color: red;
+    font-size: 5em;
+    margin: 0;
+    padding: 20px;
+}
+
+.error{
+    font-size: 3.5em;
+    margin: 0;
+    padding: 20px;
+}
+
+p{
+    font-size: 1.7em;
+    margin: 0;
+    padding: 20px;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(27, 27, 195, 1);
+    font-size: 1.4em;
+    padding: 20px;
+}
