@@ -17,7 +17,7 @@
         <h1 id="logo">Voter App <sub>beta</sub></h1>
 
         {% if login_status == 1 %}
-            <button id="logout">Logout</button>
+            <a href="{{ url_for('auth.logout') }}">Logout</a>
         {% elif login_status == 2 %}
             <button>Home</button>
             <button id="logout">Logout</button>

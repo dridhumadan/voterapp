@@ -32,18 +32,21 @@ sub {
     padding: 2px 4px;
 }
 
-header button {
-    border: none;
-    padding: 15px 40px;
+header a{
+    text-decoration: none;
+    border: 2px solid rgba(27, 27, 195, 1);
+    padding: 10px 20px;
     margin-right: 20px;
-    background: rgb(27, 27, 195);
-    background: linear-gradient(90deg, rgba(27, 27, 195, 1) 0%, rgba(53, 180, 205, 1) 100%);
-    color: white;
-    cursor: pointer;
-    font-size: 1.3em;
-    font-family: 'Montserrat';
-    font-weight: 600;
+    color: rgba(27, 27, 195, 1);
+    font-size: 1.2em;
+    font-size: 600;
     text-transform: uppercase;
+}
+
+header a:hover{
+    background-color: rgba(27, 27, 195, 1);
+    color: white;
+    transition: 0.3s ease-out;
 }
 
 .flash{
