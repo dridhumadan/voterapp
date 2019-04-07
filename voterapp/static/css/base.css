@@ -34,19 +34,13 @@ sub {
 
 header a{
     text-decoration: none;
-    border: 2px solid rgba(27, 27, 195, 1);
     padding: 10px 20px;
     margin-right: 20px;
     color: rgba(27, 27, 195, 1);
-    font-size: 1.2em;
-    font-size: 600;
-    text-transform: uppercase;
 }
 
 header a:hover{
-    background-color: rgba(27, 27, 195, 1);
-    color: white;
-    transition: 0.3s ease-out;
+    color: rgb(22,152,48,1);
 }
 
 .flash{
