@@ -20,6 +20,18 @@
             </script>
         </div>
         {% endfor%}
+        <div class="cand" id="8">
+            <img src="static/images/8.png" alt="" id = "symbol">
+            <h3>8</h3>
+            <p>NOTA</p>
+            <script>
+                cand = document.getElementById('8');
+            
+                cand.onclick = function(){
+                    window.location.href = '/vote/CKAXXNO'
+                }
+            </script>
+        </div>
     </div>
     <!--<script src="{{ url_for('static', filename = 'js/vote.js') }}"></script>-->
 </div>
