@@ -1,7 +1,7 @@
 .dashboard{
     display: grid;
-    grid-template-rows: 100px 120px 120px 160px;
-    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 200px 200px;
+    grid-template-columns: repeat(4, 1fr);
     color: white;
 }
 
@@ -10,11 +10,11 @@
 }
 
 .info{
-    background-color: #ededed;
-    color: rgba(27,27,195,1);
+    background-color: rgba(63,9,156,1);
+    color: white;
     box-shadow: 0 10px 6px -6px #777;
     grid-row: span 1;
-    grid-column: span 2;
+    grid-column: span 4;
     margin: 10px 20px 15px 20px;
     display: flex;
     align-items: center;
@@ -27,61 +27,58 @@
 
 .status{
     padding: 10px;
-    background-color: rgb(22,152,48,1);
+    background-color: rgba(22,152,48,1);
     color: white;
     border-radius: 40px;
 }
 
 .span-info{
     padding: 10px;
-    border: 1px solid rgba(27,27,195,1);
+    border: 2px solid rgba(22,152,48,1);
     border-radius: 40px;
 }
 
-.vote{
-    grid-row: span 2;
+.user-details{
     grid-column: span 1;
+    grid-row: span 2;
     margin: 5px 5px 5px 20px;
-    background: rgb(219,17,17);
-    background: linear-gradient(90deg, rgba(219,17,17,1) 0%, rgba(250,49,49,1) 100%);
 }
 
-.correction{
+.vote{
     grid-row: span 1;
     grid-column: span 1;
-    background: rgb(226,218,33);
-    background: linear-gradient(90deg, rgba(240,232,37,1) 0%, rgba(249,246,13,1) 100%);
+    margin: 5px;
 }
 
 .candidate{
     grid-row: span 1;
     grid-column: span 1;
-    background: rgb(27,27,195);
-    background: linear-gradient(90deg, rgba(27,27,195,1) 0%, rgba(53,180,205,1) 100%);
+    margin: 5px 20px 5px 5px;
 }
 
 .results{
     grid-row: span 1;
-    grid-column: span 2;
-    margin: 5px 20px;
-    background: rgb(38,226,54);
-    background: linear-gradient(90deg, rgba(38,226,54,1) 0%, rgba(22,152,48,1) 100%);
+    grid-column: span 1;
+    margin: 5px;
 }
 
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgba(63,9,156,1);
+    border: 2px solid rgba(63,9,156,1);
 }
 
 .box p{
     margin: 0px;
-    padding: 0px 20px;
+    padding: 0px;
     font-size: 2em;
 }
 
 .box h1{
     margin: 0;
+    padding: 0px 10px;
 }
 
 .box2{
@@ -106,7 +103,10 @@
 }
 
 .hov:hover{
-  transform: scale(1.02);
-  transition: transform 0.1s ease-out;
-  box-shadow: 0 10px 6px -6px #777;
+    background-color: rgba(22,152,48,1);
+    border-color: rgba(22,152,48,1);
+    color: white;
+    transform: scale(1.02);
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 10px 6px -6px #777;
 }

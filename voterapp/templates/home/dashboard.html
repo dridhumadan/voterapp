@@ -5,26 +5,25 @@
     <div class="vs">{{ voter.cand_id }}</div>
     <div class="dashboard">
         <div class="info">
-            <h3>{{ voter.first_name }} {{ voter.last_name }}</h3>
+            <h3><i class="fas fa-user fa-fw fa-lg"></i>  {{ voter.first_name }} {{ voter.last_name }}</h3>
             <h3>Voter ID : <span class="span-info">{{ voter.voter_id }}</span></h3>
             <h3>Constituency : <span class="span-info">{{ cname }}</span></h3>
             <h3>Vote Casted : <span class="status"><i class="fas fa-check fa-fw fa-lg" id="vs"></i></span></h3>
         </div>
+        <aside class="user-details box">
+            <h1>User details</h1>
+        </aside>
         <div class="vote box hov">
-            <h1><i class="fas fa-hand-point-up fa-fw fa-2x"></i></h1>
-            <p>Cast your Vote!</p>
-        </div>
-        <div class="correction box2 hov">
-            <h1><i class="fas fa-pen fa-fw fa-lg"></i></h1>
-            <p>Apply for correction in details</p>
-        </div>
-        <div class="candidate box2 hov">
-            <h1><i class="fas fa-users fa-fw fa-lg"></i></h1>
-            <p>View candidate details</p>
+            <h1><i class="fas fa-hand-point-up fa-fw fa-lg"></i></h1>
+            <p>Vote</p>
         </div>
         <div class="results box hov">
-            <h1><i class="fas fa-chart-pie fa-fw fa-2x"></i></h1>
-            <p>View results</p>
+            <h1><i class="fas fa-chart-pie fa-fw fa-lg"></i></h1>
+            <p>Results</p>
+        </div>
+        <div class="candidate box hov">
+            <h1><i class="fas fa-users fa-fw fa-lg"></i></h1>
+            <p>Candidates</p>
         </div>
     </div>
     <script src="{{ url_for('static', filename = 'js/dashboard.js') }}"></script>
