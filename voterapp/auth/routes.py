@@ -29,6 +29,10 @@ def register():
         return redirect(url_for('home.dashboard'))
     form = RegistrationForm()
     if form.validate_on_submit():
+        em = Voter.query.filter_by(email_id = form.email_id.data).first()
+        if em != None:
+            flash('User with this email id already exists!')
+            return redirect(url_for('auth.register'))
         vid = ''
         votid = Voter.query.filter_by(const_code = form.constituency.data).order_by((Voter.voter_id).desc()).first()
         if votid is None:
