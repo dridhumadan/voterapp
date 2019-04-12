@@ -1,20 +1,37 @@
-{% extends "home/base.html" %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+    <title>Voter App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
-    <div class="index">
-        <h1 class="heading">Welcome to the Voter App</h1>
-        <p>Login or Register to use the app</p>
-        <div class="main-block">
-            <div class="login sec">
-                <h1><i class="fas fa-user fa-fw fa-2x"></i></h1>
+    <script src="{{ url_for('static', filename = 'js/all.js') }}"></script>
+</head>
+<body>
+    <main>
+        <h1>Voter App</h1>
+        <h2><i class="fas fa-hand-point-up fa-fw fa-6x"></i></h2>
+    </main>
+
+    <div class="links">
+        <a href="{{ url_for('auth.login') }}">
+            <div class="box">
+                <h1><i class="fas fa-user fa-fw fa-lg"></i></h1>
                 <h2>Login</h2>
             </div>
-            <div class="register sec">
-                <h1><i class="fab fa-wpforms fa-fw fa-2x"></i></h1>
+        </a>
+        <a href="{{ url_for('auth.register') }}">
+            <div class="box">
+                <h1><i class="fab fa-wpforms fa-fw fa-lg"></i></h1>
                 <h2>Register</h2>
             </div>
-        </div>
+        </a>
     </div>
-    <script src="{{ url_for('static', filename = 'js/index.js') }}" charset="utf-8"></script>
-{% endblock content %}
+
+    <footer>
+        <h5>&copy; Dridhu Madan</h5>
+    </footer>
+</body>
+</html>

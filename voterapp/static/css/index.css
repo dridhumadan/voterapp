@@ -1,56 +1,68 @@
-.index{
-    color: rgba(27,27,195,1);
+html, body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
-.heading{
+body{
+    font-family: 'Montserrat';
+    font-size: 1em;
+    background-color: #efefef;
     text-align: center;
+}
+
+main h1{
     font-size: 3em;
+    padding: 20px;
+    color: rgb(16,16,16);
 }
 
-.index p{
-    text-align: center;
-    font-size: 2em;
-    padding-bottom: 20px;
+main h2{
+    margin: 30px;
+    color: #1462a8;
+    padding-bottom: 40px;
 }
 
-.main-block{
-    display: grid;
-    grid-template-rows: 150px;
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    color: white;
-}
-
-.sec{
-    grid-row: span 1;
-    grid-column: span 1;
-    margin: 20px;
+.links{
     display: flex;
-    justify-content: start;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
 }
 
-.sec:hover{
-    transform: scale(1.02);
-    transition: transform 0.3s ease-out;
-    box-shadow: 0 10px 6px -6px #777;
+a{
+    text-decoration: none;
+    color: rgb(16,16,16);
 }
 
-.sec h1{
+.box{
+    display: flex;
+    align-items: center;
     margin: 20px;
+    height: 80px;
+    width: 300px;
+    border: 2px solid rgb(16,16,16);
+    border-radius: 7px;
 }
 
-.sec h2{
-    font-size: 2.5em;
+.box:hover{
+    background-color: rgb(16,16,16);
+    color: #1462a8;
+    transition: 0.2s ease-out;
 }
 
-.login{
-    background: rgb(38,226,54);
-    background: linear-gradient(90deg, rgba(38,226,54,1) 0%, rgba(22,152,48,1) 100%);
+.box h1{
+    margin: 0px;
+    padding: 20px;
 }
 
-.register{
-    background: rgb(27,27,195);
-    background: linear-gradient(90deg, rgba(27,27,195,1) 0%, rgba(53,180,205,1) 100%);
+.box h2{
+    margin: 0px;
+    font-size: 2em;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
 }
