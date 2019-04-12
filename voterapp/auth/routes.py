@@ -18,9 +18,9 @@ def login():
         if voter is None or (voter.password != form.password.data):
             flash('Incorrect email or password')
             return redirect(url_for('auth.login'))
-        login_user(voter, remember=True)
+        login_user(voter, remember=False)
         return redirect(url_for('home.dashboard'))
-    return render_template('auth/login.html', title = 'Login', form = form)
+    return render_template('auth/login.html', form = form)
 
 
 @auth.route('/auth/register', methods = ['GET', 'POST'])
