@@ -17,4 +17,4 @@ def index():
 def dashboard():
     voter = current_user
     const_name = Constituency.query.filter_by(const_code = current_user.const_code).first().const_name
-    return render_template('home/dashboard.html', title = 'Dashboard', login_status = 1, voter = voter, cname = const_name)
+    return render_template('home/dashboard.html', title = 'Dashboard', voter = voter, cname = const_name)
