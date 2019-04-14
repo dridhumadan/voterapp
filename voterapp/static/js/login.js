@@ -22,12 +22,18 @@ function changeQuote(){
     count += 1;
 }
 
-flash = document.getElementsByClassName('flash')[0];
+flashbox = document.getElementsByClassName('flashbox')[0];
 close = document.getElementsByTagName('h6')[0];
 close.addEventListener("click", () => {
-    flash.style.display = 'none';
+    flashbox.classList.add('toggle-flashbox');
+    setTimeout(() => {
+        flashbox.style.display = 'none';
+    }, 500);
 });
             
 window.setTimeout(() => {
-    flash.style.display = 'none';
-}, 8000);
+    flashbox.classList.add('toggle-flashbox');
+    setTimeout(() => {
+        flashbox.style.display = 'none';
+    }, 500);
+}, 5000);
