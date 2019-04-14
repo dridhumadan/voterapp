@@ -64,9 +64,11 @@
     {% with messages = get_flashed_messages() %}
     {%  if messages %}
         {% for message in messages %}
-        <div class="flash">
-            <h3>{{ message }}</h3>
-            <h6><i class="fas fa-times fa-fw fa-2x"></i></h6>
+        <div class="flashbox">
+            <div class="flash">
+                <h3>{{ message }}</h3>
+                <h6><i class="fas fa-times fa-fw fa-2x"></i></h6>
+            </div>
         </div>
         {% endfor %}
     {% endif %}
