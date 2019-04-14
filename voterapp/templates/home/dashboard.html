@@ -1,30 +1,29 @@
 {% extends "home/base.html" %}
 
 {% block content %}
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/dashboard.css') }}">
-    <div class="vs">{{ voter.cand_id }}</div>
-    <div class="dashboard">
-        <div class="info">
-            <h3><i class="fas fa-user fa-fw fa-lg"></i>  {{ voter.first_name }} {{ voter.last_name }}</h3>
-            <h3>Voter ID : <span class="span-info">{{ voter.voter_id }}</span></h3>
-            <h3>Constituency : <span class="span-info">{{ cname }}</span></h3>
-            <h3>Vote Casted : <span class="status"><i class="fas fa-check fa-fw fa-lg" id="vs"></i></span></h3>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/dashboard.css') }}">
+<main>
+    <div class="cards">
+        <div class="card name">
+            <h5>Name</h5>
+            <h3>{{ voter.first_name }} {{ voter.last_name }}</h3>
         </div>
-        <aside class="user-details box">
-            <h1>User details</h1>
-        </aside>
-        <div class="vote box hov">
-            <h1><i class="fas fa-hand-point-up fa-fw fa-lg"></i></h1>
-            <p>Vote</p>
+        <div class="card voterid">
+            <h5>Voter ID</h5>
+            <h3>{{ voter.voter_id }}</h3>
         </div>
-        <div class="results box hov">
-            <h1><i class="fas fa-chart-pie fa-fw fa-lg"></i></h1>
-            <p>Results</p>
+        <div class="card con">
+            <h5>Constituency</h5>    
+            <h3>{{ cname }}</h3>
         </div>
-        <div class="candidate box hov">
-            <h1><i class="fas fa-users fa-fw fa-lg"></i></h1>
-            <p>Candidates</p>
+        <div class="card vs">
+            <h5>Vote Casted</h5>
+            <h3>N/A</h3>
         </div>
     </div>
-    <script src="{{ url_for('static', filename = 'js/dashboard.js') }}"></script>
-{% endblock content %}
+</main>
+
+<div class="carousel">
+    
+</div>
+{% endblock %}
