@@ -25,6 +25,11 @@ def cast_vote(cand_id):
     flash('Voting Successful!')
     return redirect(url_for('home.dashboard'))
 
+@users.route('/results')
+@login_required
+def results():
+    return render_template('users/results.html', title = 'Results')
+
 
 @users.route('/candidates')
 @login_required
