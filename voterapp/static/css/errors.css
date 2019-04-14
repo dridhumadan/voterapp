@@ -1,10 +1,31 @@
-.content-section{
+html, body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+body{
+    font-family: 'Montserrat';
+    font-size: 1em;
+    background-color: #efefef;
+    color: rgb(17,17,17);
     text-align: center;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(17,17,17);
+}
+
+header h1{
+    margin: 0px;
+    padding: 20px;
+    font-size: 2.5em;
 }
 
 .logo{
     color: red;
-    font-size: 5em;
+    font-size: 6em;
     margin: 0;
     padding: 20px;
 }
@@ -24,7 +45,7 @@ p{
 a{
     display: inline-block;
     text-decoration: none;
-    color: rgba(27, 27, 195, 1);
+    color: #1462a8;
     font-size: 1.4em;
     padding: 20px;
 }
