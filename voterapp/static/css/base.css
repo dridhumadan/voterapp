@@ -1,0 +1,111 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    background-color: #efefef;
+}
+
+.flashbox{
+    position: fixed;
+    top: 0;
+    left: 23%;
+    width: 77%;
+    height: 60px;
+    background-color: rgb(17,17,17);
+    color: #efefef;
+    box-shadow: 0px 4px 10px 0px rgba(17,17,17,1);
+}
+
+.flash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flash h3{
+    margin: 0px;
+    padding: 20px;
+}
+
+.flash h6{
+    margin: 0px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.flash h6:hover{
+    color: #1462a8;
+}
+
+.toggle-flashbox{
+    transform: translateY(-60px);
+    transition: transform 0.5s ease-in-out;
+}
+
+aside{
+    background-color: rgb(17,17,17);
+    color: #efefef;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 23%;
+}
+
+aside h1{
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #efefef;
+}
+
+aside a{
+    text-decoration: none;
+    color: #efefef;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    padding: 7px 10px;
+    border: 1px solid rgb(17,17,17);
+    border-radius: 7px;
+}
+
+.link:hover{
+    background-color: #efefef;
+    color: rgb(17,17,17);
+    transition: 0.2s ease-out;
+}
+
+.link h3{
+    color: #1462a8;
+    margin: 0px;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.link h2{
+    margin: 0px;
+    padding-left: 10px;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #efefef;
+    width: 90%;
+}
+
+.content{
+    margin-left: 23%;
+    width: 100%;
+}
