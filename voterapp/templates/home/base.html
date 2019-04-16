@@ -28,7 +28,7 @@
             </div>
         </a>
         <a href="{{ url_for('users.results') }}">
-            <div class="link">
+            <div class="results link">
                 <h3><i class="fas fa-chart-pie fa-fw fa-lg"></i></h3>
                 <h2>Results</h2>
             </div>
@@ -72,6 +72,18 @@
         {% endfor %}
     {% endif %}
     {% endwith %}
+
+    <script>
+        var vs = '{{ voter.cand_id }}';
+        var votelink = document.getElementsByClassName('vote')[0];
+        var resultslink = document.getElementsByClassName('results')[0];
+        if(vs != 'None'){
+            votelink.style.display = 'none';
+        }
+        else{
+            resultslink.style.display = 'none';
+        }
+    </script>
 
     <script src="{{ url_for('static', filename = 'js/base.js') }}"></script>
 </body>

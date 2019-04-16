@@ -18,7 +18,7 @@
         </div>
         <div class="card vs">
             <h5>Vote Casted</h5>
-            <h3>N/A</h3>
+            <h3 id="vsph">{{ voter.cand_id }}</h3>
         </div>
     </div>
 </main>
@@ -26,4 +26,15 @@
 <div class="carousel">
     
 </div>
+
+<script>
+var vs = '{{ voter.cand_id }}';
+var vsph = document.getElementById('vsph');
+if(vs != 'None'){
+    vsph.style.color = 'green';
+}
+else{
+    vsph.innerHTML = 'N/A';
+}
+</script>
 {% endblock %}

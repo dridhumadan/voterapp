@@ -1,0 +1,100 @@
+main{
+    margin: 20px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17,17,17);
+    color: #1462a8;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+
+.info h3{
+    margin: 0px;
+    padding: 20px;
+}
+
+.info span{
+    color: #efefef;
+}
+
+.divider{
+    height: 3px;
+    background-color: rgb(17,17,17);
+}
+
+.candidates{
+    margin-top: 20px;
+}
+
+.cand{
+    display: flex;
+    align-items: center;
+    color: rgb(17,17,17);
+    border: 4px solid rgb(17,17,17);
+    border-radius: 7px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+
+.cand:hover{
+    border: 4px solid hsl(208, 79%, 37%);
+    transition: 0.2s ease-out;
+}
+
+.cand h3{
+    margin: 0px;
+    padding: 20px;
+}
+
+.cand img{
+    height: 60px;
+    width: 60px;
+    padding: 0px 10px;
+}
+
+.cand h2{
+    margin: 0px;
+    padding: 20px;
+}
+
+.select{
+    display: none;
+    position: absolute;
+    right: 40px;
+    background-color: green;
+    color: #efefef;
+    border-radius: 7px;
+}
+
+.select h5{
+    font-size: 2em;
+    margin: 0px;
+    padding: 3px;
+}
+
+.cast-vote{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cast-vote a{
+    text-decoration: none;
+    border: 2px solid rgb(17,17,17);
+    border-radius: 7px;
+    background-color: rgb(17,17,17);
+    color: #1462a8;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cast-vote a:hover{
+    background-color: #efefef;
+    color: rgb(17,17,17);
+    transition: 0.2s ease-out;
+}
