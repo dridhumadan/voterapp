@@ -52,7 +52,7 @@ aside{
     position: fixed;
     left: 0;
     height: 100vh;
-    width: 23%;
+    width: 320px;
 }
 
 aside h1{
@@ -102,6 +102,6 @@ hr{
 }
 
 .content{
-    margin-left: 23%;
+    margin-left: 320px;
     width: 100%;
 }

@@ -29,6 +29,7 @@ main{
 }
 
 .card h3{
+    font-size: 1.3rem;
     margin: 0;
     padding: 1.2rem 0rem;
 }

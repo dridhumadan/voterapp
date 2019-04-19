@@ -18,7 +18,7 @@
         </div>
         <div class="card vs">
             <h5>Vote Casted</h5>
-            <h3 id="vsph">{{ voter.cand_id }}</h3>
+            <h3 id="vsph"><i class="fas fa-check fa-fw"></i></h3>
         </div>
     </div>
 </main>
@@ -34,7 +34,8 @@ if(vs != 'None'){
     vsph.style.color = 'rgb(18, 187, 116)';
 }
 else{
-    vsph.innerHTML = 'N/A';
+    vsph.children[0].classList.remove('fa-check');
+    vsph.children[0].classList.add('fa-times');
 }
 </script>
 {% endblock %}
