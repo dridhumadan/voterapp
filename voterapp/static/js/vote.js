@@ -4,7 +4,7 @@ var candidates = [];
 var voted = null;
 var setvotelink = '';
 
-for (let i = 0; i < parties.length - 1; i += 1) {
+for (let i = 0; i < parties.length; i += 1) {
     let canddiv = document.getElementById(`${String(i + 1)}`);
     if (canddiv == null || canddiv == undefined) {
         continue;
@@ -27,7 +27,7 @@ function selectCandidate(index, cand_index) {
     if (voted == null) {
         voted = index + 1;
         candidates[cand_index].ob.children[4].style.display = 'block';
-        candidates[cand_index].ob.style.borderColor = '#1462a8';
+        candidates[cand_index].ob.style.borderColor = 'rgb(18, 187, 116)';
 
         fetch(`/vote/fetch/${voted}`).then((res) => {
             res.json().then((body) => {
@@ -41,7 +41,7 @@ function selectCandidate(index, cand_index) {
         pre.children[4].style.display = 'none';
         pre.style.borderColor = 'rgb(17,17,17)';
         candidates[cand_index].ob.children[4].style.display = 'block';
-        candidates[cand_index].ob.style.borderColor = '#1462a8';
+        candidates[cand_index].ob.style.borderColor = 'rgb(18, 187, 116)';
         voted = index + 1;
 
         fetch(`/vote/fetch/${voted}`).then((res) => {
@@ -53,6 +53,7 @@ function selectCandidate(index, cand_index) {
     }
 }
 
+/*
 cast.addEventListener("click", (e) => {
     e.preventDefault();
     if (voted == null) {
@@ -64,4 +65,4 @@ cast.addEventListener("click", (e) => {
             window.location.href = cast.href;
         }
     }
-});
+});*/

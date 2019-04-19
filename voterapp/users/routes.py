@@ -28,6 +28,11 @@ def cast_vote(cand_id):
     if(vs != None):
         flash('You have already voted!')
         return redirect(url_for('home.dashboard'))
+    if(cand_id == 'CKAXXNO'):
+        voter = Voter.query.filter_by(voter_id = current_user.voter_id).update(dict(cand_id = cand_id))
+        db.session.commit()
+        flash('Voting Successful!')
+        return redirect(url_for('home.dashboard'))
     codelen = len(cand_id)
     if(codelen != 7):
         flash('Invalid ID!')
@@ -44,6 +49,8 @@ def cast_vote(cand_id):
 
 @users.route('/vote/fetch/<string:party_no>',  methods=['GET', 'POST'])
 def fetch_id(party_no):
+    if(party_no == '8'):
+        return json.dumps({'cand_id': 'CKAXXNO'});
     candidates = Candidate.query.filter_by(const_code = current_user.const_code, party_no = party_no).first()
     return json.dumps({'cand_id': candidates.cand_id});
 

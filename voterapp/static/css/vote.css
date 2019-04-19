@@ -1,5 +1,5 @@
 main{
-    margin: 20px;
+    margin: 1.5rem;
 }
 
 .info{
@@ -7,14 +7,14 @@ main{
     align-items: center;
     justify-content: center;
     background-color: rgb(17,17,17);
-    color: #1462a8;
-    margin-bottom: 20px;
+    color: rgb(18, 187, 116);
+    margin-bottom: 1.5rem;
     border-radius: 7px;
 }
 
 .info h3{
-    margin: 0px;
-    padding: 20px;
+    margin: 0;
+    padding: 1.2rem;
 }
 
 .info span{
@@ -27,7 +27,8 @@ main{
 }
 
 .candidates{
-    margin-top: 20px;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
 }
 
 .cand{
@@ -36,65 +37,70 @@ main{
     color: rgb(17,17,17);
     border: 4px solid rgb(17,17,17);
     border-radius: 7px;
-    margin: 20px 0px;
+    margin: 1.5rem 0rem;
     cursor: pointer;
 }
 
 .cand:hover{
-    border: 4px solid hsl(208, 79%, 37%);
+    border: 4px solid rgb(18, 187, 116);
     transition: 0.2s ease-out;
 }
 
 .cand h3{
-    margin: 0px;
-    padding: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0rem;
+    width: 110px;
 }
 
 .cand img{
     height: 60px;
     width: 60px;
-    padding: 0px 10px;
+    padding: 0rem 0.5rem;
 }
 
 .cand h2{
-    margin: 0px;
-    padding: 20px;
+    margin: 0;
+    padding: 1.5rem;
 }
 
 .select{
     display: none;
     position: absolute;
-    right: 40px;
-    background-color: green;
+    right: 3rem;
+    background-color: rgb(18, 187, 116);
     color: #efefef;
     border-radius: 7px;
 }
 
 .select h5{
-    font-size: 2em;
+    font-size: 2rem;
     margin: 0px;
     padding: 3px;
 }
 
 .cast-vote{
     text-align: center;
-    padding-top: 20px;
+    padding-top: 1.5rem;
 }
 
-.cast-vote a{
+.btn{
+    display: inline-block;
     text-decoration: none;
-    border: 2px solid rgb(17,17,17);
-    border-radius: 7px;
-    background-color: rgb(17,17,17);
-    color: #1462a8;
-    padding: 10px 20px;
-    font-size: 1.3em;
-    text-transform: uppercase;
+    font-size: 1.3rem;
     font-weight: 600;
+    text-transform: uppercase;
+    color: #efefef;
+    background-color: rgb(18, 187, 116);
+    outline: none;
+    border: 2px solid rgb(18, 187, 116);
+    border-radius: 7px;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
 }
 
-.cast-vote a:hover{
-    background-color: #efefef;
-    color: rgb(17,17,17);
-    transition: 0.2s ease-out;
+.btn:hover{
+    border: 2px solid rgb(18, 187, 116);
+    transform: translateY(-5px);
 }
