@@ -28,12 +28,12 @@ close.addEventListener("click", () => {
     flashbox.classList.add('toggle-flashbox');
     setTimeout(() => {
         flashbox.style.display = 'none';
-    }, 500);
+    }, 300);
 });
             
 window.setTimeout(() => {
     flashbox.classList.add('toggle-flashbox');
     setTimeout(() => {
         flashbox.style.display = 'none';
-    }, 500);
+    }, 300);
 }, 5000);
