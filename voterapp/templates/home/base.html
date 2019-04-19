@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/base.css') }}">
     <script src="{{ url_for('static', filename = 'js/all.js') }}"></script>
 </head>
+
 <body>
     <aside>
         <a href="{{ url_for('home.index') }}">
@@ -64,26 +65,12 @@
     {%  if messages %}
         {% for message in messages %}
         <div class="flashbox">
-            <div class="flash">
-                <h3>{{ message }}</h3>
-                <h6><i class="fas fa-times fa-fw fa-2x"></i></h6>
-            </div>
+            <h3>{{ message }}</h3>
+            <h6><i class="fas fa-times fa-fw fa-2x"></i></h6>
         </div>
         {% endfor %}
     {% endif %}
     {% endwith %}
-
-    <script>
-        var vs = '{{ voter.cand_id }}';
-        var votelink = document.getElementsByClassName('vote')[0];
-        var resultslink = document.getElementsByClassName('results')[0];
-        if(vs != 'None'){
-            votelink.style.display = 'none';
-        }
-        else{
-            resultslink.style.display = 'none';
-        }
-    </script>
 
     <script src="{{ url_for('static', filename = 'js/base.js') }}"></script>
 </body>

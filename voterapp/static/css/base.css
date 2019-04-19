@@ -1,52 +1,49 @@
-html, body{
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
+html{
+    font-size: 16px;
 }
 
 body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
     display: flex;
     font-family: 'Montserrat';
-    font-size: 1em;
     background-color: #efefef;
 }
 
 .flashbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 23%;
     width: 77%;
     height: 60px;
     background-color: rgb(17,17,17);
-    color: #efefef;
+    color: rgb(18, 187, 116);
     box-shadow: 0px 4px 10px 0px rgba(17,17,17,1);
 }
 
-.flash{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flashbox h3{
+    margin: 0;
+    padding: 1.5rem;
 }
 
-.flash h3{
-    margin: 0px;
-    padding: 20px;
-}
-
-.flash h6{
-    margin: 0px;
+.flashbox h6{
+    margin: 0;
     position: absolute;
-    right: 30px;
+    right: 2rem;
     cursor: pointer;
 }
 
-.flash h6:hover{
-    color: #1462a8;
+.flashbox h6:hover{
+    color: rgb(18, 187, 116);
 }
 
 .toggle-flashbox{
     transform: translateY(-60px);
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 aside{
@@ -59,10 +56,10 @@ aside{
 }
 
 aside h1{
-    margin: 0px;
-    padding: 20px;
+    margin: 0;
+    padding: 1.3rem;
     text-align: center;
-    font-size: 2em;
+    font-size: 2rem;
     color: #efefef;
 }
 
@@ -74,9 +71,8 @@ aside a{
 .link{
     display: flex;
     align-items: center;
-    margin: 0px 10px;
-    padding: 7px 10px;
-    border: 1px solid rgb(17,17,17);
+    margin: 0.2rem 0.7rem;
+    padding: 0.5rem;
     border-radius: 7px;
 }
 
@@ -87,15 +83,15 @@ aside a{
 }
 
 .link h3{
-    color: #1462a8;
-    margin: 0px;
-    padding: 10px;
-    font-size: 1.5em;
+    color: rgb(18, 187, 116);
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .link h2{
-    margin: 0px;
-    padding-left: 10px;
+    margin: 0;
+    padding-left: 0.5rem;
 }
 
 hr{
