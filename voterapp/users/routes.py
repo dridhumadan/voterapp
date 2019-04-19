@@ -69,10 +69,10 @@ def results():
 @users.route('/candidates')
 @login_required
 def candidates():
+    con = Constituency.query.filter_by(const_code = current_user.const_code).first()
+    candidates = con.candidates
     voter = current_user
-    cand = Candidate.query.filter_by(const_code = current_user.const_code).all()
-    party = Party.query.all()
-    return render_template('users/candidates.html', title = 'Candidates', cand = cand, party = party, voter = voter)
+    return render_template('users/candidates.html', title = 'Candidates', cand = candidates, con = con, voter = voter)
 
 
 @users.route('/account')
