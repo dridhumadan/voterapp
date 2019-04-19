@@ -1,1 +1,45 @@
 {% extends "home/base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/candidates.css') }}">
+    <main>
+        <div class="info">
+            <h3>Constituency : <span>{{ con.const_name }}</span></h3>
+            <h3>Code : <span>{{ con.const_code }}</span></h3>
+        </div>
+        <div class="divider"></div>
+
+        <div class="candidates">
+            {% for candidate in cand %}
+                <div class="cand" id="{{ candidate.party_no }}">
+                    <h4></h4>
+                    <img src="">
+                    <h3 class="candid">{{ candidate.cand_id }}</h3>
+                    <h3>{{ candidate.first_name }} {{ candidate.last_name }}</h3>
+                </div>
+            {% endfor %}
+            <div class="cand" id="8">
+                <h4></h4>
+                <img src="">
+                <h3 class="candid">CKAXXNO</h3>
+                <h3>None of the above</h3>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var parties = ['BJP', 'INC', 'JDS', 'BSP', 'CPI', 'AAP', 'IND', 'NOTA'];
+        var candidates = [];
+        for (let i = 0; i < parties.length; i += 1) {
+            let canddiv = document.getElementById(`${String(i + 1)}`);
+            if (canddiv == null || canddiv == undefined) {
+                continue;
+            }
+            candidates.push({ ob: canddiv, index: i });
+        }
+        for (let candidate of candidates) {
+            candidate.ob.children[0].innerHTML = parties[candidate.index];
+            candidate.ob.children[1].src = 'static/images/' + parties[candidate.index] + '.png';
+        }
+    </script>
+{% endblock %}

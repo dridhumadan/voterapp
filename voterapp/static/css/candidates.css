@@ -1,0 +1,61 @@
+main{
+    margin: 1.5rem;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17,17,17);
+    color: rgb(18, 187, 116);
+    margin-bottom: 1.5rem;
+    border-radius: 7px;
+}
+
+.info h3{
+    margin: 0;
+    padding: 1.2rem;
+}
+
+.info span{
+    color: #efefef;
+}
+
+.divider{
+    height: 3px;
+    background-color: rgb(17,17,17);
+}
+
+.cand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0rem;
+    border: 4px solid rgb(18, 187, 116);
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.cand h4{
+    margin: 0;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.cand img{
+    height: 100px;
+    width: 100px;
+    padding: 0.5rem;
+}
+
+.cand h3{
+    font-size: 1.2rem;
+}
+
+.candid{
+    text-align: center;
+    width: 150px;
+    margin: 0;
+    padding: 0.5rem;
+}
