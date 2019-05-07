@@ -37,6 +37,7 @@ class Constituency(UserMixin, db.Model):
     candidates = db.relationship('Candidate', backref = 'constituency', lazy = True)
     voters = db.relationship('Voter', backref = 'constituency', lazy = True)
 
+
 class Party(UserMixin, db.Model):
     party_no = db.Column(db.Integer, primary_key = True)
     party_name = db.Column(db.String(30), nullable = False)
