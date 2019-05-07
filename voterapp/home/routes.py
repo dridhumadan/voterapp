@@ -16,5 +16,6 @@ def index():
 @login_required
 def dashboard():
     voter = current_user
-    const_name = Constituency.query.filter_by(const_code = current_user.const_code).first().const_name
-    return render_template('home/dashboard.html', title = 'Dashboard', voter = voter, cname = const_name)
+    constituency = Constituency.query.filter_by(const_code = current_user.const_code).first()
+    noc = len(constituency.candidates) + 1
+    return render_template('home/dashboard.html', title = 'Dashboard', voter = voter, cname = constituency.const_name, noc = noc)

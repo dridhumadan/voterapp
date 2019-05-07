@@ -2,38 +2,45 @@ main{
     margin: 1.5rem;
 }
 
-.cards{
+.info-bar{
+    margin-bottom: 2rem;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    background-color: rgb(17,17,17);
-    color: rgb(18, 187, 116);
-    padding: 0.5rem;
+    background-color: #dfdfdf;
     border-radius: 7px;
+    box-shadow: 0px 0px 2px 3px rgba(17, 17, 17, 0.25);
+}
+
+.info-bar h2{
+    margin: 0;
+    padding: 1rem;
+}
+
+.info-bar h2 span{
+    color: rgb(18, 187, 116);
+    padding: 0.3rem;
 }
 
 .card{
-    text-align: center;
+    margin: 2rem 0rem;
+    border: 3px solid rgb(18, 187, 116);
     border-radius: 7px;
-    width: 12rem;
-    margin: 0rem 1rem;
 }
 
-.card h5{
-    color: #efefef;
-    margin: 0.5rem 0rem;
-    padding: 0.3rem;
-    font-size: 1.1rem;
-    border: 2px solid rgb(18, 187, 116);
-    border-radius: 7px;
+.card h2{
+    margin: 0;
+    padding: 1rem;
 }
 
 .card h3{
-    font-size: 1.3rem;
     margin: 0;
-    padding: 1.2rem 0rem;
+    padding: 0.5rem 1rem;
 }
 
-.vs h3{
-    color: rgb(216, 8, 8);
+.card h3 span{
+    display: inline-block;
+    width: 200px;
+    color: rgb(18, 187, 116);
+    padding: 0.5rem;
 }
