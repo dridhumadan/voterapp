@@ -52,17 +52,3 @@ function selectCandidate(index, cand_index) {
         });
     }
 }
-
-/*
-cast.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (voted == null) {
-        window.alert('Please select a Candidate first!');
-    }
-    else {
-        confirm = window.confirm("Are you sure you want to vote for Party no. : " + voted);
-        if (confirm == true) {
-            window.location.href = cast.href;
-        }
-    }
-});*/
