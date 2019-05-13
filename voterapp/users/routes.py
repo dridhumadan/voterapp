@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, redirect, url_for, flash
 from voterapp.models import Voter, Candidate, Constituency, Party
 from voterapp import db
 from flask_login import current_user, login_required
+from voterapp.users.utils import getResultData
 
 users = Blueprint('users', __name__)
 
@@ -50,9 +51,9 @@ def cast_vote(cand_id):
 @users.route('/vote/fetch/<string:party_no>',  methods=['GET', 'POST'])
 def fetch_id(party_no):
     if(party_no == '8'):
-        return json.dumps({'cand_id': 'CKAXXNO'});
+        return json.dumps({'cand_id': 'CKAXXNO'})
     candidates = Candidate.query.filter_by(const_code = current_user.const_code, party_no = party_no).first()
-    return json.dumps({'cand_id': candidates.cand_id});
+    return json.dumps({'cand_id': candidates.cand_id})
 
 
 @users.route('/results')
@@ -66,6 +67,12 @@ def results():
     return render_template('users/results.html', title = 'Results', voter = voter)
 
 
+@users.route('/api/resultData')
+def resultData():
+    resultsJson = getResultData()
+    return json.dumps(resultsJson)
+
+
 @users.route('/candidates')
 @login_required
 def candidates():
@@ -73,10 +80,3 @@ def candidates():
     candidates = con.candidates
     voter = current_user
     return render_template('users/candidates.html', title = 'Candidates', cand = candidates, con = con, voter = voter)
-
-
-@users.route('/account')
-@login_required
-def account():
-    voter = current_user
-    return render_template('users/account.html', title = 'Account', voter = voter)
