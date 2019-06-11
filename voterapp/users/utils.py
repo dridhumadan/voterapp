@@ -10,7 +10,7 @@ def getResultData():
     for cand in candidates:
         cand_ids.append(cand.cand_id)
     cand_ids.append('CKAXXNO')
-    cand_ids.append('None')
+    cand_ids.append('Not Voted')
     
     votes = {}
     voters = Voter.query.filter_by(const_code = c_code).all()
