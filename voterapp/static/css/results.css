@@ -1,0 +1,24 @@
+main{
+    margin: 1.5rem;
+}
+
+main h1{
+    margin: 0;
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+}
+
+.canvas-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.canvas{
+    width: 600px;
+    height: 400px;
+}
+
+.canvas h3{
+    margin: 0;
+    padding: 1rem 1rem 1rem 5rem;
+}

@@ -1,1 +1,74 @@
 {% extends "home/base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+<main>
+    <h1>Results</h1>
+    <div class="canvas-wrapper">
+        <div class="canvas">
+            <canvas id="myChart"></canvas>
+            <h3> * Hover over the chart to see no. of votes</h3>
+        </div> 
+    </div>
+</main>
+
+<script>
+
+var resultData = {}
+var parties = []
+var votes = []
+
+fetch('http://localhost:5000/api/resultData').then(
+    (res) => res.json()
+)
+.then(
+    (myJson) => {
+        resultData = myJson;
+        parties = Object.keys(resultData);
+        votes = Object.values(resultData);
+    }
+);
+
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var options = {
+    layout: {
+        padding: 10
+    },
+    legend: {
+        position: 'bottom',
+        fullWidth: true,
+        labels: {
+            fontSize: 16,
+            fontColor: 'rgb(17, 17, 17)',
+            fontFamily: 'Montserrat',
+            padding: 16
+        }
+    },
+    maintainAspectRatio: true
+}
+
+setTimeout(function createChart(){
+    var chart = new Chart(ctx, {
+    type: 'pie',
+
+    data: {
+        labels: parties,
+        datasets: [{
+            backgroundColor: ['orange', 'lightblue', 'pink', 'lightgrey'],
+            borderColor: '#efefef',
+            borderWidth: 1,
+            data: votes
+        }]
+    },
+
+    options: options
+});
+}, 1000)
+
+
+</script>
+
+<script src="{{ url_for('static', filename='js/results.js') }}"></script>
+{% endblock %}
