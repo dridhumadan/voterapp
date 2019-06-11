@@ -1,0 +1,77 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-family: 'Montserrat';
+    background-color: #efefef;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+header h1{
+    margin: 0;
+    margin-right: auto;
+}
+
+header a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(17, 17, 17);
+}
+
+.selection{
+    padding-top: 1rem;
+}
+
+select{
+    width: 300px;
+    height: 40px;
+    border: 2px solid #efefef;
+    border-radius: 7px;
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    padding: 0.1rem 0.5rem;
+    appearance: none;
+    transition: all 0.3s ease-out;
+}
+
+select:focus{
+    border: 2px solid rgb(17, 17, 17);
+}
+
+table, thead, tbody, th, tr, td{
+    border: 2px solid rgb(17, 17, 17);
+}
+
+th, td{
+    padding: 5px;
+}
+
+thead{
+    background-color: rgb(17, 17, 17);
+    color: rgb(18, 187, 116);
+}
+
+.hidden{
+    display: none;
+}
+
+.voters, .parties, .candidates, .constituencies{
+    margin: 2em;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}

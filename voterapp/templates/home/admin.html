@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/admin.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Admin Page</h1>
+        <a href="/">Home</a>
+    </header>
+    <hr>
+
+    <div class="selection">
+        <select id="tables">
+            <option value="">Select a table</option>
+            <option value="voter">Voter</option>
+            <option value="party">Party</option>
+            <option value="candidate">Candidate</option>
+            <option value="constituency">Constituency</option>
+        </select>
+    </div>
+    
+
+    <div class="voters hidden">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Voter ID</th>
+                        <th>Email ID</th>
+                        <th>Password</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Address</th>
+                        <th>Candidate ID</th>
+                        <th>Constituency Code</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for voter in voters %}
+                    <tr>
+                        <td>{{ voter.voter_id }}</td>
+                        <td>{{ voter.email_id }}</td>
+                        <td>{{ voter.password }}</td>
+                        <td>{{ voter.first_name }}</td>
+                        <td>{{ voter.last_name }}</td>
+                        <td>{{ voter.dob }}</td>
+                        <td>{{ voter.address }}</td>
+                        <td>{{ voter.cand_id }}</td>
+                        <td>{{ voter.const_code }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="parties hidden">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Party No.</th>
+                        <th>Party Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for party in parties %}
+                    <tr>
+                        <td>{{ party.party_no }}</td>
+                        <td>{{ party.party_name }}</td>
+                        <td>{{ party.address }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="candidates hidden">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Candidate ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Party No.</th>
+                        <th>Constituency Code</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for candidate in candidates %}
+                    <tr>
+                        <td>{{ candidate.cand_id }}</td>
+                        <td>{{ candidate.first_name }}</td>
+                        <td>{{ candidate.last_name }}</td>
+                        <td>{{ candidate.party_no }}</td>
+                        <td>{{ candidate.const_code }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="constituencies hidden">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Constituency Code</th>
+                        <th>Constituency Name</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for constituency in constituencies %}
+                    <tr>
+                        <td>{{ constituency.const_code }}</td>
+                        <td>{{ constituency.const_name }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        var current = null;
+        var previous = null;
+        var voters = document.getElementsByClassName('voters')[0];
+        var parties = document.getElementsByClassName('parties')[0];
+        var candidates = document.getElementsByClassName('candidates')[0];
+        var constituencies = document.getElementsByClassName('constituencies')[0];
+        var sel = document.getElementById('tables');
+
+        var elements = [null, voters, parties, candidates, constituencies];
+
+        sel.addEventListener("change", changeTable);
+
+        function changeTable(){
+            current = sel.selectedIndex;
+            if(elements[previous] != null){
+                elements[previous].classList.add('hidden');
+            }
+            elements[current].classList.remove('hidden');
+            previous = current;
+        }
+
+    </script>
+</body>
+
+</html>
